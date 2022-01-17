@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
     #local
     'core',
+    'accounts',
+    'book',
 ]
 
 AUTH_USER_MODEL = 'core.User'
@@ -146,3 +148,11 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "japneetrajput2804@gmail.com" # sender email
 EMAIL_HOST_PASSWORD = "Commando007" #Commando@007
+
+AUTHENTICATION_BACKENDS = ['core.models.EmailBackend']
+
+REST_FRAMEWORK={
+    "DEFAULT_AUTHENTICATION_CLASSES":[
+        'rest_framework.authentication.TokenAuthentication'
+    ]
+}
