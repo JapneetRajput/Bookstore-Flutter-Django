@@ -3,6 +3,14 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 main() async {
+  // ListOfBook listOfBook = await BookService().getBook();
+  // print(listOfBook.books[0].id);
+}
+
+
+
+
+previusmain() async {
   AuthService authService = AuthService();
 
   // final logoutUrl = Uri.parse("http://127.0.0.1:8000/accounts/logout/");
@@ -16,50 +24,50 @@ main() async {
     "Authorization": "Token f1207a4373cc84d3badc33c8afe24b1f49d9f3e9"
   });
   print(response.body);
-
-// f1207a4373cc84d3badc33c8afe24b1f49d9f3e9
-
-  // LoginResponse? loginResponse = await authService.login(
-  //   "Arj23",
-  //   "Commandoo",
-  // );
-  // if (loginResponse != null) {
-  //   if (loginResponse.key != null) print(loginResponse.key);
-  //   if (loginResponse.non_field_erros != null)
-  //     loginResponse.non_field_erros!.forEach((element) {
-  //       print(element);
-  //     });
-  // }
-
-  // RegistrationResponse? registrationResponse = await authService.registration(
-  //     "Arj23", "Commandoo", "Commandoo", "japneetrajput23@gmai.com");
-  // if (registrationResponse != null) {
-  //   if (registrationResponse.email != null) {
-  //     registrationResponse.email!.forEach((element) {
-  //       print(element);
-  //     });
-  //   }
-
-  //   if (registrationResponse.username != null) {
-  //     registrationResponse.username!.forEach((element) {
-  //       print(element);
-  //     });
-  //   }
-  //   if (registrationResponse.non_field_errors != null) {
-  //     registrationResponse.non_field_errors!.forEach((element) {
-  //       print(element);
-  //     });
-  //   }
-  //   if (registrationResponse.password1 != null) {
-  //     registrationResponse.password1!.forEach((element) {
-  //       print(element);
-  //     });
-  //   }
-  //   if (registrationResponse.key != null) {
-  //     print(registrationResponse.key!);
-  //   }
-  // }
 }
+
+// key f1207a4373cc84d3badc33c8afe24b1f49d9f3e9
+
+// LoginResponse? loginResponse = await authService.login(
+//   "Arj23",
+//   "Commandoo",
+// );
+// if (loginResponse != null) {
+//   if (loginResponse.key != null) print(loginResponse.key);
+//   if (loginResponse.non_field_erros != null)
+//     loginResponse.non_field_erros!.forEach((element) {
+//       print(element);
+//     });
+// }
+
+// RegistrationResponse? registrationResponse = await authService.registration(
+//     "Arj23", "Commandoo", "Commandoo", "japneetrajput23@gmai.com");
+// if (registrationResponse != null) {
+//   if (registrationResponse.email != null) {
+//     registrationResponse.email!.forEach((element) {
+//       print(element);
+//     });
+//   }
+
+//   if (registrationResponse.username != null) {
+//     registrationResponse.username!.forEach((element) {
+//       print(element);
+//     });
+//   }
+//   if (registrationResponse.non_field_errors != null) {
+//     registrationResponse.non_field_errors!.forEach((element) {
+//       print(element);
+//     });
+//   }
+//   if (registrationResponse.password1 != null) {
+//     registrationResponse.password1!.forEach((element) {
+//       print(element);
+//     });
+//   }
+//   if (registrationResponse.key != null) {
+//     print(registrationResponse.key!);
+//   }
+// }
 
 class AuthService {
   final registrationUri = Uri.parse("http://127.0.0.1:8000/registration/");
